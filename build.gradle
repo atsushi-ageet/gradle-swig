@@ -4,7 +4,7 @@ plugins {
     id 'com.gradle.plugin-publish' version '0.9.3'
 }
 
-group 'net.tribe7.gradle'
+group 'com.ageet.gradle-swig'
 version '0.1.1'
 
 sourceCompatibility = 1.7
@@ -20,13 +20,13 @@ dependencies {
 }
 
 pluginBundle {
-    website = 'https://github.com/jjzazuet/gradle-swig'
-    vcsUrl = 'https://github.com/jjzazuet/gradle-swig.git'
+    website = 'https://github.com/atsushi-ageet/gradle-swig'
+    vcsUrl = 'https://github.com/atsushi-ageet/gradle-swig.git'
     description = 'SWIG/JNI wrapper.'
 
     plugins {
         swigPlugin {
-            id = 'net.tribe-seven.swig'
+            id = 'com.ageet.gradle-swig'
             displayName = 'Gradle SWIG/JNI plugin.'
             tags = ['swig', 'java', 'jni', 'c', 'c++']
         }
