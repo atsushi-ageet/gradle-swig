@@ -7,14 +7,14 @@ plugins {
 group 'com.ageet.gradle-swig'
 version '0.1.2'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 21
+targetCompatibility = 21
 
 repositories { jcenter() }
 
 dependencies {
     implementation gradleApi()
-    testImplementation( 'org.spockframework:spock-core:1.0-groovy-2.4' ) {
+    testImplementation( 'org.spockframework:spock-core:2.3-groovy-3.0' ) {
         exclude module: 'groovy-all'
     }
 }
