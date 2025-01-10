@@ -28,7 +28,10 @@ public class SwigTask extends Exec {
     @Override
     protected void exec() {
 
-        setExecutable(swigPath == null ? "swig" : swigPath);
+        var swigPath = java.util.Optional.ofNullable(this.swigPath)
+                .or(() -> java.util.Optional.ofNullable(getProject().findProperty("swigPath")).map(Object::toString))
+                .orElse("swig");
+        setExecutable(swigPath);
 
         notNull(module, "Missing module name.");
         notNull(packageName, "Missing java package name.");
