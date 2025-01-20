@@ -28,7 +28,7 @@ public class SwigTask extends Exec {
     @Override
     protected void exec() {
 
-        var swigPath = java.util.Optional.ofNullable(this.swigPath)
+        String swigPath = java.util.Optional.ofNullable(this.swigPath)
                 .or(() -> java.util.Optional.ofNullable(getProject().findProperty("swigPath")).map(Object::toString))
                 .orElse("swig");
         setExecutable(swigPath);
