@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.ageet.gradle-swig'
-version '0.1.3'
+version '0.1.4'
 
 sourceCompatibility = 8
 targetCompatibility = 8
